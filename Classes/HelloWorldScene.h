@@ -14,6 +14,8 @@ public:
 
     void menuSetCallback(cocos2d::Ref* pSender);
     
+    //张翔的菜单回调函数
+    void enterZxScene(Ref* pSender);
 
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
