@@ -17,6 +17,9 @@ public:
     //张翔的菜单回调函数
     void enterZxScene(Ref* pSender);
 
+    //王诗腾的菜单回调函数
+    void HelloWorld::mzdsxScene(Ref* pSender);
+
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 private:
