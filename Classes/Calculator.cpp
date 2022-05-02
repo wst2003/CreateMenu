@@ -34,5 +34,8 @@ double AddCalculator::calculate()
 {
 	return getLeftNum() + getRightNum();
 }
-
-
+/*≥À∑®¿‡*/
+double MultiplyCalculator::calculate()
+{
+	return getLeftNum() * getRightNum();
+}

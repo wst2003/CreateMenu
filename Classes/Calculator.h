@@ -23,3 +23,8 @@ class AddCalculator :public Calculator{
 public:
 	virtual double calculate();
 };
+/*≥À∑®¿‡*/
+class MultiplyCalculator :public Calculator {
+public:
+	virtual double calculate();
+};
