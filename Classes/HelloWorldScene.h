@@ -13,6 +13,7 @@ public:
     virtual bool init();
 
     void addMenuItemCallBack(Ref* pSender);
+    void multiplyMenuItemCallBack(Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 private:

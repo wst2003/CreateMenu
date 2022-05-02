@@ -2,6 +2,7 @@
 #include "CharEncodingConvert.h"
 #include "Calculator.h"
 #include "AddCalculatorScene.h"
+#include "MultiplyScene.h"
 
 USING_NS_CC;
 
@@ -43,6 +44,15 @@ bool HelloWorld::init()
 	addMenu->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - 100));
 	addChild(addMenu);
 
+	/*俞春先的乘法计算器*/
+	MenuItemFont::setFontName("Times New Roman");
+	MenuItemFont::setFontSize(60);
+	MenuItemFont* multiplicationMenuItem = MenuItemFont::create("multiply",
+		CC_CALLBACK_1(HelloWorld::multiplyMenuItemCallBack, this));
+	Menu* menu = Menu::create(multiplicationMenuItem, NULL);
+	menu->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2));
+	this->addChild(menu);
+
 	return true;
 }
 
@@ -50,4 +60,11 @@ void HelloWorld::addMenuItemCallBack(Ref* pSender)
 {
 	auto addCalculatorScene = AddCalculatorScene::createScene();
 	Director::getInstance()->pushScene(addCalculatorScene);
+}
+
+void HelloWorld::multiplyMenuItemCallBack(Ref* pSender)
+{
+	auto multiplyScene = Multiply::createScene();
+	auto actionScene = TransitionSlideInR::create(0.5f, multiplyScene);
+	Director::getInstance()->pushScene(actionScene);
 }
