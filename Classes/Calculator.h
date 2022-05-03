@@ -11,6 +11,8 @@ public:
 	static void setResult(const int index,const double result);
 
 	virtual double calculate() = 0;//需要重写
+
+	double* getResult() const;
 private:
 	int leftNum;
 	int rightNum;
@@ -25,6 +27,18 @@ public:
 };
 /*乘法类*/
 class MultiplyCalculator :public Calculator {
+public:
+	virtual double calculate();
+};
+
+/*除法类*/
+class DivisionCalculator :public Calculator {
+public:
+	virtual double calculate();
+};
+
+/*结果类*/
+class AllAnswer :public Calculator {
 public:
 	virtual double calculate();
 };

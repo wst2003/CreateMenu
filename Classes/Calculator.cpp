@@ -27,6 +27,10 @@ void Calculator::setResult(const int index, const double result)
 	results[index] = result;
 }
 
+double* Calculator::getResult() const
+{
+	return results;
+}
 
 /*大家自己的派生类定义*/
 /*加法类*/
@@ -38,4 +42,15 @@ double AddCalculator::calculate()
 double MultiplyCalculator::calculate()
 {
 	return getLeftNum() * getRightNum();
+}
+
+/*除法类*/
+double DivisionCalculator::calculate()
+{
+	return 1.0 * getLeftNum() / getRightNum();
+}
+
+double AllAnswer::calculate()
+{
+	return 0.0;
 }

@@ -14,6 +14,11 @@ public:
 
     void addMenuItemCallBack(Ref* pSender);
     void multiplyMenuItemCallBack(Ref* pSender);
+
+    void enterDivisionScene(Ref* pSender);
+
+    void enterAnswerScene(Ref* pSender);
+
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 private:
