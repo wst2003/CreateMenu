@@ -1,7 +1,7 @@
 #pragma once
-/*´ËÎÄ¼şÓÃÀ´ÉùÃ÷»ùÀàºÍ¸÷¸öÅÉÉúÀà*/
+/*æ­¤æ–‡ä»¶ç”¨æ¥å£°æ˜åŸºç±»å’Œå„ä¸ªæ´¾ç”Ÿç±»*/
 
-/*»ùÀàÉùÃ÷¡ª¡ªÍõÊ«ÌÚ±àĞ´*/
+/*åŸºç±»å£°æ˜â€”â€”ç‹è¯—è…¾ç¼–å†™*/
 class Calculator {
 public:
 	void setLeftNum(int& leftNum);
@@ -10,34 +10,39 @@ public:
 	int getRightNum();
 	static void setResult(const int index,const double result);
 
-	virtual double calculate() = 0;//ĞèÒªÖØĞ´
+	virtual double calculate() = 0;//éœ€è¦é‡å†™
 
 	double* getResult() const;
 private:
 	int leftNum;
 	int rightNum;
-	static double results[4];//Ã¿¸ö¼ÆËã»ú¹²Í¬Î¬»¤´ËÊı×é
+	static double results[4];//æ¯ä¸ªè®¡ç®—æœºå…±åŒç»´æŠ¤æ­¤æ•°ç»„
 };
 
-/*´ó¼Ò×Ô¼ºµÄÅÉÉúÀàÉùÃ÷*/
-/*¼Ó·¨Àà*/
+/*å¤§å®¶è‡ªå·±çš„æ´¾ç”Ÿç±»å£°æ˜*/
+/*åŠ æ³•ç±»*/
 class AddCalculator :public Calculator{
 public:
 	virtual double calculate();
 };
-/*³Ë·¨Àà*/
+/*å‡æ³•ç±»*/
+class MinusCalculator :public Calculator {
+public:
+	virtual double calculate();
+};
+/*ä¹˜æ³•ç±»*/
 class MultiplyCalculator :public Calculator {
 public:
 	virtual double calculate();
 };
 
-/*³ı·¨Àà*/
+/*é™¤æ³•ç±»*/
 class DivisionCalculator :public Calculator {
 public:
 	virtual double calculate();
 };
 
-/*½á¹ûÀà*/
+/*ç»“æœç±»*/
 class AllAnswer :public Calculator {
 public:
 	virtual double calculate();
