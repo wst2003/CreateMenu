@@ -1,6 +1,6 @@
 #include "Calculator.h"
 
-/*»ùÀàÈô¸Éº¯Êı¡ª¡ªÍõÊ«ÌÚ±àĞ´*/
+/*åŸºç±»è‹¥å¹²å‡½æ•°â€”â€”ç‹è¯—è…¾ç¼–å†™*/
 double Calculator::results[4] = { 0,0,0,0 };
 void Calculator::setLeftNum(int& leftNum)
 {
@@ -32,19 +32,24 @@ double* Calculator::getResult() const
 	return results;
 }
 
-/*´ó¼Ò×Ô¼ºµÄÅÉÉúÀà¶¨Òå*/
-/*¼Ó·¨Àà*/
+/*å¤§å®¶è‡ªå·±çš„æ´¾ç”Ÿç±»å®šä¹‰*/
+/*åŠ æ³•ç±»*/
 double AddCalculator::calculate()
 {
 	return getLeftNum() + getRightNum();
 }
-/*³Ë·¨Àà*/
+/*å‡æ³•ç±»*/
+double minusCalculator::calculate()
+{
+	return getLeftNum() - getRightNum();
+}
+/*ä¹˜æ³•ç±»*/
 double MultiplyCalculator::calculate()
 {
 	return getLeftNum() * getRightNum();
 }
 
-/*³ı·¨Àà*/
+/*é™¤æ³•ç±»*/
 double DivisionCalculator::calculate()
 {
 	return 1.0 * getLeftNum() / getRightNum();
